@@ -19,7 +19,7 @@ class MainViewModel : ViewModel() {
         return bitmap
     }
 
-    fun getSelectedColor(bitmap: Bitmap, x: Int, y: Int): String {
+    fun getSelectedColor(bitmap: Bitmap, x: Int, y: Int): Int {
         val pixel = bitmap.getPixel(x, y)
 
         val r = pixel.let { Color.red(it) }
@@ -28,11 +28,13 @@ class MainViewModel : ViewModel() {
 
         val hex = "#".plus(Integer.toHexString(pixel))
 
-        return hex
+//        return hex
 
-//        return Color.rgb(r, g, b)
+        return Color.rgb(r, g, b)
 
     }
+
+
 
 
 

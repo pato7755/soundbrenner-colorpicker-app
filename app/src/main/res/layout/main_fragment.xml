@@ -25,9 +25,9 @@
             android:checkable="true"
             android:clickable="true"
             android:focusable="true"
-            app:layout_constraintDimensionRatio="w,1:1"
             app:cardBackgroundColor="@color/dark_gray"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,1:1"
             app:layout_constraintEnd_toStartOf="@id/controlTwo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -49,9 +49,9 @@
             android:checkable="true"
             android:clickable="true"
             android:focusable="true"
-            app:layout_constraintDimensionRatio="w,1:1"
             app:cardBackgroundColor="@color/dark_gray"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,1:1"
             app:layout_constraintEnd_toStartOf="@id/controlThree"
             app:layout_constraintStart_toEndOf="@id/controlOne"
             app:layout_constraintTop_toTopOf="parent">
@@ -73,9 +73,9 @@
             android:checkable="true"
             android:clickable="true"
             android:focusable="true"
-            app:layout_constraintDimensionRatio="w,1:1"
             app:cardBackgroundColor="@color/dark_gray"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/controlTwo"
             app:layout_constraintTop_toTopOf="parent">
@@ -98,17 +98,31 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleType="fitCenter"
-        android:contentDescription="@string/hint"
-        app:layout_constraintDimensionRatio="w,1:1"
-        android:src="@drawable/radial_wheel"
         android:layout_marginTop="30dp"
+        app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraint_layout" />
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/hint"
+            android:scaleType="fitXY"
+            android:src="@drawable/radial_wheel" />
+
+        <View
+            android:id="@+id/selector"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background" />
+
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

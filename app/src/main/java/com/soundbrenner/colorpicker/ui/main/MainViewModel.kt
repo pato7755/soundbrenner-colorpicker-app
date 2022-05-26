@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModel
 class MainViewModel : ViewModel() {
 
     fun getBitmapFromView(view: View): Bitmap {
-        var bitmap =
+        val bitmap =
             Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
-        var canvas = Canvas(bitmap)
+        val canvas = Canvas(bitmap)
         view.draw(canvas)
         return bitmap
     }
@@ -22,10 +22,6 @@ class MainViewModel : ViewModel() {
         val r = pixel.let { Color.red(it) }
         val g = pixel.let { Color.green(it) }
         val b = pixel.let { Color.blue(it) }
-
-        val hex = "#".plus(Integer.toHexString(pixel))
-
-//        return hex
 
         return Color.rgb(r, g, b)
 

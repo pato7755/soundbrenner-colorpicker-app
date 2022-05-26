@@ -115,12 +115,15 @@
             android:scaleType="fitXY"
             android:src="@drawable/radial_wheel" />
 
-        <View
+        <ImageView
             android:id="@+id/selector"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
-            android:background="@drawable/circle_background" />
+            android:contentDescription="@string/selector"
+            android:scaleType="fitXY"
+            android:background="@drawable/circle_background_white_outline"
+            />
 
     </FrameLayout>
 

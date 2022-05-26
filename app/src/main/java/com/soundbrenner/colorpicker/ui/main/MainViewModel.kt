@@ -4,12 +4,9 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.view.View
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-
-    val pixels = MutableLiveData<Int>()
 
     fun getBitmapFromView(view: View): Bitmap {
         var bitmap =
@@ -33,9 +30,6 @@ class MainViewModel : ViewModel() {
         return Color.rgb(r, g, b)
 
     }
-
-
-
 
 
 }
